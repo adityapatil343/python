@@ -1,0 +1,31 @@
+
+13. Write a program to take the screenshot and print the characteristics of image – width and height and rotate the image by 90 degree.
+from PIL import Image,ImageGrab 
+import PIL 
+image1 = ImageGrab.grab(bbox=None) 
+image1.show() 
+width, height = image1.size 
+print(width, height) 
+im1 = image1.rotate(90) 
+im1.show()
+
+
+
+18.	Write a program to take the screenshot , crop the image, change the size and display and save all newly created images.
+from PIL import Image,ImageGrab 
+image2 = ImageGrab.grab(bbox=None) 
+image2.show() 
+width, height = image2.size 
+print(width, height) 
+left = 4 
+top = height / 5 
+right = 154 
+bottom = 3 * height / 5 
+ im1 = image2.crop((left, top, right, bottom)) 
+im1.show() 
+newsize = (300, 300) 
+im1 = im1.resize(newsize) 
+ im1.show()
+
+
+

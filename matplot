@@ -1,0 +1,56 @@
+10.Write a program in python using Matplotlib to display a bar chart of the popularity of programming Languages.
+import matplotlib.pyplot as pyplot 
+ 
+labels = ('Python', 'Java', 'JavaScript', 'C#', 'PHP', 'C,C++', 'R') 
+sizes = [29.9, 19.1, 8.2, 7.3, 6.2, 5.9, 3.7] 
+
+pyplot.bar(labels, sizes, color="#6c3376") 
+ 
+pyplot.ylabel('Usage in %') 
+pyplot.xlabel('Programming Languages') 
+ 
+pyplot.show() 
+
+
+
+11.Write a program in python using Matplotlib to display a horizontal bar chart
+of the popularity of programming Languages.
+import matplotlib.pyplot as pyplot 
+ 
+labels = ('Python', 'Java', 'JavaScript', 'C#', 'PHP', 'C,C++', 'R') 
+sizes = [29.9, 19.1, 8.2, 7.3, 6.2, 5.9, 3.7] 
+
+pyplot.barh(labels,sizes, color="#6c3376") 
+ 
+pyplot.ylabel('Usage in %') 
+pyplot.xlabel('Programming Languages') 
+ 
+pyplot.show() 
+
+
+
+12. Write a program in python using Matplotlib to display a bar chart of the
+popularity of programming Languages. Use different color for each bar
+import matplotlib.pyplot as plt
+x = ['Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++']
+popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+plt.bar(x, popularity, color=['red', 'black', 'green', 'blue', 'yellow', 'cyan'])
+plt.xlabel("Languages")
+plt.ylabel("Popularity")
+plt.title("PopularitY of Programming Language\n" + "Worldwide, Oct 2017 compared to a year ago")
+plt.show()
+
+
+20.	Write a program to demonstrate to save two numbers in mat format using scipy 
+import scipy.io as syio  
+# Save the mat file  
+n = 1706256  
+n1= 23456  
+syio.savemat('num.mat', {'num': n,'num1':n1})  
+# Load the mat File  
+matlab_file_contents = syio.loadmat('num.mat')  
+print(matlab_file_contents['num1'])  
+print(matlab_file_contents)  
+# printing the contents of mat file.  
+matlab_file_contents = syio.whosmat('num.mat')  
+print(matlab_file_contents)  

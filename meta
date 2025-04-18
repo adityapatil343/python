@@ -1,0 +1,23 @@
+14. Write a program to extract metadata of given pdf file.
+
+import pikepdf
+pdf_filename = '/content/gdrive/My Drive/digital forensics/Practical-Cryptography.pdf'
+pdf = pikepdf.Pdf.open(pdf_filename)
+docinfo = pdf.docinfo
+for key, value in docinfo.items():
+    print(key, ":", value)
+
+
+19.	Write a program to extract metadata from mp4 file
+from tinytag import TinyTag
+def handle_mp4file(mp4_file):
+	video = TinyTag.get(mp4_file)
+	print("Title:",video.title)
+	print("composer:",video.composer)
+	print("bitrate:",video.bitrate)
+	print("size:",video.filesize)
+	print("Duration:",video.duration)
+	print("Genre:",video.genre)
+
+file_path = '/content/gdrive/My Drive/digital forensics/Free_Test_Data_15MB_MP4.mp4'
+handle_mp4file(file_path)

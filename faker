@@ -1,0 +1,42 @@
+1.	Write a program in python to print 10 fake names and countries in Hindi language using faker package.  
+ 
+fake = Faker('hi_IN')   
+name=[]  
+country=[]  
+for _ in range(10):   
+    name.append(fake.name())   
+    country.append(fake.country())  
+print(name)  
+print(country)  
+
+
+
+2.	Write a program in python to create a profile and  print a particular fake data.  
+  
+import faker  
+faker_obj = faker.Faker()  
+gender = 'M'  
+male_profile = faker_obj.simple_profile(sex=gender)  
+print("Male profile generated is as follows:\n", male_profile)  
+gender = 'F'  
+female_profile = faker_obj.simple_profile(sex=gender)  
+print("Female profile generated is as follows:\n", female_profile)  
+gen_profile = faker_obj.simple_profile()  
+print("Combinations of profile is as follows:\n",gen_profile)  
+
+
+Write a program in python to create a json of 100 students with name students.json that contains student name, address, location coordinates and student roll number using faker package.  
+  
+import json  
+n=[]  
+a=[]  
+loc=[]  
+for _ in range(100):  
+  n.append(fake.name())  
+  a.append(fake.address())  
+  loc.append(fake.location_on_land())  
+dt = {"name":n,"address":a,"location":loc}  
+json = json.dumps(dt)  
+print(json)  
+
+

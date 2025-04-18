@@ -1,0 +1,22 @@
+15.Write a program to extract the information like “from , date and subject” from email file
+
+import email, email.policy
+with open('C:/Users/Madhavi/No Food at Desk Policy.eml', 'rb') as f:
+    msg = email.message_from_bytes(f.read(), policy=email.policy.SMTPUTF8)
+
+    print("Message is from-: ",msg['from'])
+    print("Message Date-: ",msg.get('date'))
+    print("Message Subject-:",msg['Subject'])
+
+
+15.Write a program to extract the information like “from , date and subject” from email file
+
+import email, email.policy
+with open('C:/Users/Madhavi/No Food at Desk Policy.eml', 'rb') as f:
+    msg = email.message_from_bytes(f.read(), policy=email.policy.SMTPUTF8)
+
+    print("Message is from-: ",msg['from'])
+    print("Message Date-: ",msg.get('date'))
+    print("Message Subject-:",msg['Subject'])
+
+
